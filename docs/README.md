@@ -5,6 +5,9 @@
 Webpage:
 <link>https://mikehell84.github.io/Xlerion-Video-2-Anim/</link>
 
+<img width="1460" height="847" alt="image" src="https://github.com/user-attachments/assets/aed68fc4-3736-43c7-813f-d38d12e82aae" />
+
+
 <h3>Características Principales</h1>
 Interfaz Gráfica Intuitiva: Gestiona todo el proceso con botones y menús, sin necesidad de usar la línea de comandos.
 
