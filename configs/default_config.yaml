@@ -1,0 +1,37 @@
+# configs/default_config.yaml
+# Parámetros de configuración por defecto para la aplicación.
+
+# --- Configuración de Captura de Video ---
+video_capture:
+  source_index: 0 # Índice de la cámara (0 suele ser la webcam integrada)
+
+# --- Configuración de Detección de Movimiento ---
+motion_detection:
+  history: 500          # Frames a considerar para el modelo de fondo
+  var_threshold: 16     # Umbral para decidir si un píxel es parte del fondo
+  detect_shadows: true  # Si se deben detectar y marcar sombras
+  blur_ksize: [5, 5]    # Tamaño del kernel para el desenfoque Gaussiano
+  threshold_val: 25     # Valor de umbral para la máscara binaria
+  dilation_kernel_size: [3, 3] # Tamaño del kernel para la dilatación
+  min_contour_area: 700 # Área mínima de contorno para ser considerado movimiento
+
+# --- Configuración de Visualización ---
+overlay_visuals:
+  hud:
+    enabled: true
+    font_scale: 0.7
+    color: [255, 255, 255] # Blanco en BGR
+    thickness: 1
+    status_text: "LIVE"
+
+# --- Configuración del Pipeline de Prueba ---
+test_pipeline:
+  frames_directory: "assets/test_frames"
+  delay_ms: 100 # Milisegundos de espera entre frames
+
+# --- Configuración de Logging ---
+logging:
+  logger_name: "MotionCaptureApp"
+  level: "INFO" # Niveles: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  directory: "logs"
+  # El nombre del archivo se genera automáticamente con la fecha

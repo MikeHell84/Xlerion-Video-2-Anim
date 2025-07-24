@@ -1,0 +1,13 @@
+# Entorno Virtual de Conda/Python
+venv/
+/mocap_env/
+*.pyc
+__pycache__/
+
+# Archivos de sesión y logs
+sessions.json
+logs/
+
+# Archivos de configuración del editor
+.vscode/
+.idea/
