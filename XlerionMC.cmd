@@ -8,11 +8,8 @@ ECHO.
 ECHO Activando el entorno de Conda 'mocap_env'...
 ECHO Por favor, espera...
 ECHO.
-
-:: Llama al script de activación de Conda. Esto asume que 'conda init' ya se ha ejecutado.
 CALL conda activate mocap_env
 
-:: Comprueba si la activación del entorno fue exitosa.
 IF %ERRORLEVEL% NEQ 0 (
     ECHO.
     ECHO *******************************************************************
@@ -29,8 +26,8 @@ ECHO Entorno activado correctamente.
 ECHO Iniciando la aplicacion grafica...
 ECHO.
 
-:: Ejecuta el script de la interfaz gráfica
+:: Run the GUI script
 python gui_app.py
 
-:: Al cerrar la GUI, el script terminará y la ventana se cerrará automáticamente.
+:: When you close the GUI, the script will terminate and the window will close automatically.
 EXIT /B
