@@ -1,14 +1,14 @@
-Xlerion - Video 2 Anim
-Español (Spanish)
-Este proyecto es una aplicación de escritorio completa en Python que utiliza una interfaz gráfica para gestionar un pipeline de captura de movimiento, desde un video hasta un archivo de animación 3D (.bvh).
+<h1>Xlerion - Video 2 Anim</h1>
+<h3>Español (Spanish)</h3>
+<p>Este proyecto es una aplicación de escritorio completa en Python que utiliza una interfaz gráfica para gestionar un pipeline de captura de movimiento, desde un video hasta un archivo de animación 3D (.bvh).</p>
 
 Webpage:
-https://mikehell84.github.io/Xlerion-Video-2-Anim/
+<link>https://mikehell84.github.io/Xlerion-Video-2-Anim/</link>
 
-✨ Características Principales
+<h3>Características Principales</h1>
 Interfaz Gráfica Intuitiva: Gestiona todo el proceso con botones y menús, sin necesidad de usar la línea de comandos.
 
-Múltiples Modos de Captura:
+<h4>Múltiples Modos de Captura:</h4>
 
 Pose Corporal: Captura el esqueleto completo de una persona.
 
@@ -26,31 +26,31 @@ Exportación a BVH: Convierte los datos de pose corporal a formato .bvh, compati
 
 Soporte Multilenguaje y Temas: Interfaz traducida a Español, Inglés y Japonés, con modo claro y oscuro.
 
-1. Guía de Instalación (Entorno Controlado con Conda)
+<h2>1. Guía de Instalación (Entorno Controlado con Conda)</h2>
 Para evitar problemas de compatibilidad, es altamente recomendable usar el gestor de entornos Conda.
 
-1.1. Instalar Miniconda
+<h3>1.1. Instalar Miniconda</h3>
 Si no lo tienes, descarga e instala Miniconda.
 
 Enlace de descarga: Miniconda para Windows
 
-1.2. Crear y Activar el Entorno
+<h3>1.2. Crear y Activar el Entorno</h3>
 Abre la Anaconda Prompt (miniconda3) desde tu menú de inicio.
 
 Crea un nuevo entorno llamado mocap_env con Python 3.10:
 
-conda create --name mocap_env python=3.10
+*conda create --name mocap_env python=3.10*
 
 Activa el entorno. Deberás hacer esto cada vez que abras una nueva terminal para trabajar en el proyecto:
 
-conda activate mocap_env
+*conda activate mocap_env*
 
-1.3. Instalar Dependencias
+<h3>1.3. Instalar Dependencias</h3>
 Con el entorno (mocap_env) activado, instala todas las librerías necesarias con un solo comando:
 
 pip install opencv-python pyyaml mediapipe numpy scipy Pillow
 
-2. Cómo Ejecutar la Aplicación (Método Fácil)
+<h3>2. Cómo Ejecutar la Aplicación (Método Fácil)</h3>
 Una vez instalado todo, puedes iniciar la aplicación fácilmente con un solo clic.
 
 Usando el Lanzador start.cmd
@@ -60,10 +60,10 @@ Haz doble clic en start.cmd.
 
 Se abrirá una terminal que activará automáticamente el entorno y lanzará la aplicación gráfica. ¡No necesitas hacer nada más!
 
-3. Cómo Usar la Interfaz
+<h3>3. Cómo Usar la Interfaz</h3>
 Panel de Sesiones (Izquierda): Aquí verás todas tus capturas guardadas. Puedes seleccionarlas para recargar sus datos, abrir su carpeta o eliminarlas.
 
-Etapa 1: Captura de Datos:
+<h4>Etapa 1: Captura de Datos:</h4>
 
 Elige un Modo: En "Ajustes de Detección", selecciona si quieres capturar "Pose Corporal", "Manos" o "Rostro".
 
@@ -71,7 +71,7 @@ Selecciona una Fuente: Haz clic en "Seleccionar Video" para usar un archivo exis
 
 Inicia la Captura: Presiona "Iniciar Captura". Al finalizar, la sesión se guardará automáticamente.
 
-Etapa 2: Exportar Animación:
+<h4>Etapa 2: Exportar Animación:</h4>
 
 Selecciona una sesión de la lista que contenga datos de Pose Corporal.
 
@@ -79,20 +79,20 @@ Haz clic en "Exportar Animación". Se abrirá una ventana para que elijas el for
 
 Nota: La exportación a .bvh solo es compatible con los datos de "Pose Corporal".
 
-4. Uso en Software 3D
+<h3>4. Uso en Software 3D</h3>
 El archivo .bvh generado se puede importar directamente en Blender, Unity, 3ds Max y otro software de animación 3D para aplicarlo a tus personajes.
 
-5. Licencia y Derechos de Autor
+*5. Licencia y Derechos de Autor*
 Licencia del Proyecto
 Este proyecto se distribuye bajo la Licencia MIT.
 
-Copyright (c) 2025 Miguel Rodriguez Martinez
+**Copyright (c) 2025 Miguel Rodriguez Martinez**
 
 Por la presente se concede permiso, libre de cargos, a cualquier persona que obtenga una copia de este software y de los archivos de documentación asociados (el "Software"), para comerciar con el Software sin restricción, incluyendo sin limitación los derechos de uso, copia, modificación, fusión, publicación, distribución, sublicencia, y/o venta de copias del Software, y para permitir a las personas a las que se les proporcione el Software que lo hagan, con sujeción a las siguientes condiciones:
 
 El aviso de copyright anterior y este aviso de permiso se incluirán en todas las copias o partes sustanciales del Software.
 
-EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, INCLUYENDO PERO NO LIMITADO A GARANTÍAS DE COMERCIABILIDAD, IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO LOS AUTORES O TITULARES DEL COPYRIGHT SERÁN RESPONSABLES DE NINGUNA RECLAMACIÓN, DAÑO U OTRA RESPONSABILIDAD, YA SEA EN UNA ACCIÓN DE CONTRATO, AGRAVIO O CUALQUIER OTRO MOTIVO, DERIVADA DE, FUERA DE O EN CONEXIÓN CON EL SOFTWARE O EL USO U OTROS TRATOS EN EL SOFTWARE.
+*EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, INCLUYENDO PERO NO LIMITADO A GARANTÍAS DE COMERCIABILIDAD, IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO LOS AUTORES O TITULARES DEL COPYRIGHT SERÁN RESPONSABLES DE NINGUNA RECLAMACIÓN, DAÑO U OTRA RESPONSABILIDAD, YA SEA EN UNA ACCIÓN DE CONTRATO, AGRAVIO O CUALQUIER OTRO MOTIVO, DERIVADA DE, FUERA DE O EN CONEXIÓN CON EL SOFTWARE O EL USO U OTROS TRATOS EN EL SOFTWARE.*
 
 Reconocimientos y Colaboración
 Este software utiliza librerías de terceros, incluyendo MediaPipe de Google (Licencia Apache 2.0) y OpenCV (Licencia Apache 2.0). Todos los derechos pertenecen a sus respectivos dueños.
@@ -103,37 +103,37 @@ English (Inglés)
 Xlerion - Video 2 Anim
 This project is a complete desktop application in Python that uses a graphical interface to manage a motion capture pipeline, from a video to a 3D animation file (.bvh).
 
-✨ Key Features
+<h3>Key Features</h3>
 Intuitive Graphical Interface: Manage the entire process with buttons and menus, without needing to use the command line.
 
-Multiple Capture Modes:
+<h4>Multiple Capture Modes:</h4>
 
-Body Pose: Captures a person's full skeleton.
+**Body Pose: Captures a person's full skeleton.**
 
-Hands (High Precision): Specializes in detailed finger movement.
+**Hands (High Precision): Specializes in detailed finger movement.**
 
-Face & Gestures: Captures a 478-point facial mesh for expressions.
+**Face & Gestures: Captures a 478-point facial mesh for expressions.**
 
-Flexible Capture: Use pre-recorded videos or capture in real-time from your webcam with a timer.
+**Flexible Capture: Use pre-recorded videos or capture in real-time from your webcam with a timer.**
 
-Session Management: Save, load, and manage all your captures in a dedicated panel.
+**Session Management: Save, load, and manage all your captures in a dedicated panel.**
 
-Real-Time Adjustments: Modify detection parameters to improve capture quality according to your needs.
+**Real-Time Adjustments: Modify detection parameters to improve capture quality according to your needs.**
 
-Export to BVH: Convert body pose data to .bvh format, compatible with most 3D software.
+**Export to BVH: Convert body pose data to .bvh format, compatible with most 3D software.**
 
-Multi-language and Theme Support: Interface translated into Spanish, English, and Japanese, with light and dark modes.
+**Multi-language and Theme Support: Interface translated into Spanish, English, and Japanese, with light and dark modes.**
 
-1. Installation Guide (Controlled Environment with Conda)
-To avoid compatibility issues, it is highly recommended to use the Conda environment manager.
+<h3>1. Installation Guide (Controlled Environment with Conda)</h3>
+**To avoid compatibility issues, it is highly recommended to use the Conda environment manager.**
 
 1.1. Install Miniconda
-If you don't have it, download and install Miniconda.
+<h4>If you don't have it, download and install Miniconda.</h4>
 
 Download link: Miniconda for Windows
 
-1.2. Create and Activate the Environment
-Open the Anaconda Prompt (miniconda3) from your Start Menu.
+<h2>1.2. Create and Activate the Environment</h2>
+*Open the Anaconda Prompt (miniconda3) from your Start Menu.*
 
 Create a new environment named mocap_env with Python 3.10:
 
@@ -169,11 +169,11 @@ Select a Source: Click "Select Video" to use an existing file or "Capture from W
 
 Start Capture: Press "Start Capture". When finished, the session will be saved automatically.
 
-Stage 2: Export Animation:
+<h2>Stage 2: Export Animation:</h2>
 
 Select a session from the list that contains Body Pose data.
 
-Click "Export Animation". A window will open for you to choose the format and save your .bvh file.
+**Click "Export Animation". A window will open for you to choose the format and save your .bvh file.**
 
 Note: Exporting to .bvh is only compatible with "Body Pose" data.
 
