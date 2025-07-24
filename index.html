@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xlerion - Video 2 Anim | Motion Capture Software</title>
+    <!-- Chosen Palette: Cyberpunk Night -->
+    <!-- Application Structure Plan: A narrative, single-page scrollable website that acts as a comprehensive guide and promotional page. The structure is designed for a clear user journey: Hero (introduction), Features (what it does), Installation (how to get it), How-to-Use (how it works), Tech Stack (what it's built with), 3D Software integration, and finally License/Credits. This thematic flow is more engaging and user-friendly than a simple report structure. Key interactions are the language switcher and smooth scrolling from a sticky navigation bar, allowing users to either follow the narrative or jump to the section they need. -->
+    <!-- Visualization & Content Choices: Key Features (Goal: Inform) -> Grid of cards with Unicode icons for quick scanning. Installation (Goal: Organize) -> Numbered, step-by-step cards with styled code blocks for clarity. Workflow (Goal: Organize/Process Flow) -> HTML/CSS flowchart. Tech Stack (Goal: Compare) -> Chart.js Donut chart to visualize component roles. All choices avoid SVG/Mermaid and prioritize a clean, modern aesthetic. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* gray-900 */
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 450px;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #2dd4bf, #818cf8); /* teal-400 to indigo-400 */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .lang-btn.active {
+            background-color: #0d9488; /* teal-600 */
+            color: white;
+        }
+        .nav-link.active {
+            color: #2dd4bf;
+        }
+    </style>
+</head>
+<body class="text-slate-300">
+
+    <nav class="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <span class="text-2xl font-bold gradient-text">Xlerion</span>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="nav-link text-gray-300 hover:text-teal-400 transition-colors" data-lang-key="nav_features">Características</a>
+                    <a href="#installation" class="nav-link text-gray-300 hover:text-teal-400 transition-colors" data-lang-key="nav_install">Instalación</a>
+                    <a href="#usage" class="nav-link text-gray-300 hover:text-teal-400 transition-colors" data-lang-key="nav_usage">Uso</a>
+                    <a href="#license" class="nav-link text-gray-300 hover:text-teal-400 transition-colors" data-lang-key="nav_license">Licencia</a>
+                </div>
+                <div class="flex items-center space-x-1 bg-gray-800 p-1 rounded-full shadow-lg">
+                    <button id="lang-es" class="lang-btn px-3 py-1 text-sm font-semibold rounded-full transition-colors duration-200">ES</button>
+                    <button id="lang-en" class="lang-btn px-3 py-1 text-sm font-semibold rounded-full transition-colors duration-200">EN</button>
+                    <button id="lang-ja" class="lang-btn px-3 py-1 text-sm font-semibold rounded-full transition-colors duration-200">JA</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center my-16 md:my-24">
+            <h1 class="text-5xl md:text-7xl font-black gradient-text" data-lang-key="mainTitle">Xlerion - Video 2 Anim</h1>
+            <p class="mt-4 text-lg md:text-xl text-slate-400 max-w-3xl mx-auto" data-lang-key="mainSubtitle">Transforma movimiento real en animaciones 3D profesionales desde tu escritorio. Una solución completa para desarrolladores de videojuegos, animadores y creadores de contenido.</p>
+        </header>
+
+        <main class="space-y-24 md:space-y-32">
+
+            <section id="features">
+                 <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold text-slate-100" data-lang-key="featuresTitle">Características Principales</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 transition-transform hover:scale-105"><h3 class="font-bold text-lg text-teal-400 flex items-center"><span class="text-2xl mr-3">🖥️</span><span data-lang-key="feature1Title">Interfaz Gráfica Intuitiva</span></h3><p class="mt-2 text-slate-400" data-lang-key="feature1Desc">Gestiona todo el proceso con una UI limpia y fácil de usar, sin tocar la línea de comandos.</p></div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 transition-transform hover:scale-105"><h3 class="font-bold text-lg text-teal-400 flex items-center"><span class="text-2xl mr-3">🏃‍♂️</span><span data-lang-key="feature2Title">Múltiples Modos de Captura</span></h3><p class="mt-2 text-slate-400" data-lang-key="feature2Desc">Captura pose corporal, manos de alta precisión o gestos faciales detallados.</p></div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 transition-transform hover:scale-105"><h3 class="font-bold text-lg text-teal-400 flex items-center"><span class="text-2xl mr-3">📂</span><span data-lang-key="feature3Title">Gestión de Sesiones</span></h3><p class="mt-2 text-slate-400" data-lang-key="feature3Desc">Guarda, carga y gestiona todas tus capturas en un panel dedicado para un flujo de trabajo organizado.</p></div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 transition-transform hover:scale-105"><h3 class="font-bold text-lg text-teal-400 flex items-center"><span class="text-2xl mr-3">⚙️</span><span data-lang-key="feature4Title">Exportación a BVH</span></h3><p class="mt-2 text-slate-400" data-lang-key="feature4Desc">Convierte los datos de pose a formato `.bvh`, el estándar compatible con la mayoría de software 3D.</p></div>
+                </div>
+            </section>
+
+            <section id="installation">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold text-slate-100" data-lang-key="setupTitle">Instalación en 3 Pasos</h2>
+                    <p class="mt-2 text-slate-400" data-lang-key="setupSubtitle">Una configuración inicial garantiza la compatibilidad y el éxito del proceso.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-gray-800 rounded-xl shadow-md p-6">
+                        <p class="text-6xl font-black text-gray-700">1</p>
+                        <h3 class="text-xl font-bold text-teal-400 mt-2" data-lang-key="installStep1Title">Instalar Miniconda</h3>
+                        <p class="mt-2 text-slate-400" data-lang-key="installStep1Desc">Usa Conda para crear un entorno de Python aislado y evitar conflictos de versiones.</p>
+                    </div>
+                    <div class="bg-gray-800 rounded-xl shadow-md p-6">
+                        <p class="text-6xl font-black text-gray-700">2</p>
+                        <h3 class="text-xl font-bold text-teal-400 mt-2" data-lang-key="installStep2Title">Crear Entorno</h3>
+                        <p class="mt-2 text-slate-400" data-lang-key="installStep2Desc">Crea un entorno (`mocap_env`) con Python 3.10, la versión ideal para las librerías del proyecto.</p>
+                        <code class="block bg-gray-900 text-teal-300 rounded-md p-3 mt-4 text-sm">conda create --name mocap_env python=3.10</code>
+                    </div>
+                    <div class="bg-gray-800 rounded-xl shadow-md p-6">
+                        <p class="text-6xl font-black text-gray-700">3</p>
+                        <h3 class="text-xl font-bold text-teal-400 mt-2" data-lang-key="installStep3Title">Instalar Dependencias</h3>
+                        <p class="mt-2 text-slate-400" data-lang-key="installStep3Desc">Instala todas las librerías necesarias dentro del entorno activado con un solo comando.</p>
+                        <code class="block bg-gray-900 text-teal-300 rounded-md p-3 mt-4 text-sm">pip install opencv-python ...</code>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="usage">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold text-slate-100" data-lang-key="pipelineTitle">Flujo de Trabajo</h2>
+                    <p class="mt-2 text-slate-400" data-lang-key="pipelineSubtitle">Inicia la aplicación haciendo doble clic en `start.cmd` y sigue estos pasos.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-gray-800 rounded-2xl shadow-lg p-8 border-t-4 border-teal-500">
+                        <h3 class="text-2xl font-bold text-teal-400" data-lang-key="stage1Title">Etapa 1: Captura de Datos</h3>
+                        <p class="mt-3 text-slate-400" data-lang-key="stage1Desc">Elige un modo de captura (Pose, Manos, Rostro), selecciona un video o usa la webcam y presiona "Iniciar Captura". La sesión se guardará automáticamente al finalizar.</p>
+                    </div>
+                     <div class="bg-gray-800 rounded-2xl shadow-lg p-8 border-t-4 border-indigo-500">
+                        <h3 class="text-2xl font-bold text-indigo-400" data-lang-key="stage2Title">Etapa 2: Exportar Animación</h3>
+                        <p class="mt-3 text-slate-400" data-lang-key="stage2Desc">Selecciona una sesión de "Pose Corporal" de la lista de la izquierda. Haz clic en "Exportar Animación" para convertir los datos a un archivo `.bvh`.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tech-stack">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold text-slate-100" data-lang-key="techTitle">Componentes Tecnológicos</h2>
+                    <p class="mt-2 text-slate-400" data-lang-key="techSubtitle">Las librerías clave que hacen posible este pipeline.</p>
+                </div>
+                <div class="bg-gray-800 rounded-2xl shadow-lg p-4 md:p-8">
+                    <div class="chart-container">
+                        <canvas id="techStackChart"></canvas>
+                    </div>
+                    <p class="text-center mt-4 text-slate-400 max-w-2xl mx-auto" data-lang-key="techDesc">MediaPipe es el corazón de la captura, mientras que NumPy y SciPy son cruciales para los cálculos matemáticos. Tkinter construye la interfaz gráfica y OpenCV gestiona el video.</p>
+                </div>
+            </section>
+
+            <section id="software-usage">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold text-slate-100" data-lang-key="usageTitle">Uso en Software 3D</h2>
+                    <p class="mt-2 text-slate-400" data-lang-key="usageSubtitle">El archivo `.bvh` final es compatible con las principales herramientas de la industria.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-md">
+                        <p class="text-5xl">Blender</p>
+                        <p class="mt-2 text-slate-400" data-lang-key="usageBlender">Importar vía `File > Import > Motion Capture (.bvh)`.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-md">
+                        <p class="text-5xl">Unity</p>
+                        <p class="mt-2 text-slate-400" data-lang-key="usageUnity">Arrastrar al proyecto, configurar el Rig como "Humanoid" y aplicar al Animator del personaje.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-md">
+                        <p class="text-5xl">3ds Max</p>
+                        <p class="mt-2 text-slate-400" data-lang-key="usage3ds">Importar directamente desde el menú `File > Import`.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="license">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold text-slate-100" data-lang-key="licenseTitle">Licencia y Derechos de Autor</h2>
+                </div>
+                <div class="bg-gray-800 rounded-2xl shadow-lg p-8 max-w-4xl mx-auto text-sm">
+                    <h3 class="font-bold text-lg text-teal-400" data-lang-key="licenseSubTitle">Licencia del Proyecto</h3>
+                    <p class="mt-2 text-slate-400" data-lang-key="licenseType">Este proyecto se distribuye bajo la Licencia MIT.</p>
+                    <p class="mt-2 text-slate-400" data-lang-key="copyrightNotice">Copyright (c) 2025 Miguel Rodriguez Martinez</p>
+                    <p class="mt-4 text-slate-500" data-lang-key="licenseDisclaimer">EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO. EN NINGÚN CASO LOS AUTORES O TITULARES DEL COPYRIGHT SERÁN RESPONSABLES DE NINGUNA RECLAMACIÓN, DAÑO U OTRA RESPONSABILIDAD.</p>
+                    <h3 class="font-bold text-lg text-teal-400 mt-6" data-lang-key="acknowledgmentsTitle">Reconocimientos y Colaboración</h3>
+                    <ul class="list-disc list-inside mt-2 text-slate-400 space-y-1">
+                        <li data-lang-key="acknowledgment1">Este software utiliza librerías de terceros, incluyendo MediaPipe de Google y OpenCV.</li>
+                        <li data-lang-key="acknowledgment2">El desarrollo del código fuente de esta aplicación fue realizado en colaboración con la IA de Google.</li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-24 md:mt-32 py-8 border-t border-gray-800">
+            <p class="text-slate-400" data-lang-key="footer-main">Un proyecto de <a href="https://www.linkedin.com/in/mikerodriguez84" target="_blank" class="font-bold text-slate-300 hover:text-teal-400 transition-colors">Miguel Rodriguez Martinez</a></p>
+            <p class="text-slate-500 text-sm" data-lang-key="footer-subtitle">Creador de Videojuegos y Desarrollador</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const translations = {
+            es: {
+                mainTitle: "Xlerion - Video 2 Anim",
+                mainSubtitle: "Transforma movimiento real en animaciones 3D profesionales desde tu escritorio. Una solución completa para desarrolladores de videojuegos, animadores y creadores de contenido.",
+                nav_features: "Características",
+                nav_install: "Instalación",
+                nav_usage: "Uso",
+                nav_license: "Licencia",
+                featuresTitle: "Características Principales",
+                feature1Title: "Interfaz Gráfica Intuitiva",
+                feature1Desc: "Gestiona todo el proceso con una UI limpia y fácil de usar, sin tocar la línea de comandos.",
+                feature2Title: "Múltiples Modos de Captura",
+                feature2Desc: "Captura pose corporal, manos de alta precisión o gestos faciales detallados.",
+                feature3Title: "Gestión de Sesiones",
+                feature3Desc: "Guarda, carga y gestiona todas tus capturas en un panel dedicado para un flujo de trabajo organizado.",
+                feature4Title: "Exportación a BVH",
+                feature4Desc: "Convierte los datos de pose a formato `.bvh`, el estándar compatible con la mayoría de software 3D.",
+                setupTitle: "Instalación en 3 Pasos",
+                setupSubtitle: "Una configuración inicial garantiza la compatibilidad y el éxito del proceso.",
+                installStep1Title: "Instalar Miniconda",
+                installStep1Desc: "Usa Conda para crear un entorno de Python aislado y evitar conflictos de versiones.",
+                installStep2Title: "Crear Entorno",
+                installStep2Desc: "Crea un entorno (`mocap_env`) con Python 3.10, la versión ideal para las librerías del proyecto.",
+                installStep3Title: "Instalar Dependencias",
+                installStep3Desc: "Instala todas las librerías necesarias dentro del entorno activado con un solo comando.",
+                pipelineTitle: "Flujo de Trabajo",
+                pipelineSubtitle: "Inicia la aplicación haciendo doble clic en `start.cmd` y sigue estos pasos.",
+                stage1Title: "Etapa 1: Captura de Datos",
+                stage1Desc: "Elige un modo de captura (Pose, Manos, Rostro), selecciona un video o usa la webcam y presiona \"Iniciar Captura\". La sesión se guardará automáticamente al finalizar.",
+                stage2Title: "Etapa 2: Exportar Animación",
+                stage2Desc: "Selecciona una sesión de \"Pose Corporal\" de la lista de la izquierda. Haz clic en \"Exportar Animación\" para convertir los datos a un archivo `.bvh`.",
+                techTitle: "Componentes Tecnológicos",
+                techSubtitle: "Las librerías clave que hacen posible este pipeline.",
+                techDesc: "MediaPipe es el corazón de la captura, mientras que NumPy y SciPy son cruciales para los cálculos matemáticos. Tkinter construye la interfaz gráfica y OpenCV gestiona el video.",
+                chartLabels: ['MediaPipe (Pose/Mano/Rostro)', 'OpenCV (Video)', 'NumPy/SciPy (Cálculos)', 'Tkinter (GUI)'],
+                usageTitle: "Uso en Software 3D",
+                usageSubtitle: "El archivo `.bvh` final es compatible con las principales herramientas de la industria.",
+                usageBlender: "Importar vía `File > Import > Motion Capture (.bvh)`.",
+                usageUnity: "Arrastrar al proyecto, configurar el Rig como \"Humanoid\" y aplicar al Animator del personaje.",
+                usage3ds: "Importar directamente desde el menú `File > Import`.",
+                licenseTitle: "Licencia y Derechos de Autor",
+                licenseSubTitle: "Licencia del Proyecto",
+                licenseType: "Este proyecto se distribuye bajo la Licencia MIT.",
+                copyrightNotice: "Copyright (c) 2025 Miguel Rodriguez Martinez",
+                licenseDisclaimer: "EL SOFTWARE SE PROPORCIONA \"TAL CUAL\", SIN GARANTÍA DE NINGÚN TIPO. EN NINGÚN CASO LOS AUTORES O TITULARES DEL COPYRIGHT SERÁN RESPONSABLES DE NINGUNA RECLAMACIÓN, DAÑO U OTRA RESPONSABILIDAD.",
+                acknowledgmentsTitle: "Reconocimientos y Colaboración",
+                acknowledgment1: "Este software utiliza librerías de terceros, incluyendo MediaPipe de Google y OpenCV.",
+                acknowledgment2: "El desarrollo del código fuente de esta aplicación fue realizado en colaboración con la IA de Google.",
+                "footer-main": "Un proyecto de <a href=\"https://www.linkedin.com/in/mikerodriguez84\" target=\"_blank\" class=\"font-bold text-slate-300 hover:text-teal-400 transition-colors\">Miguel Rodriguez Martinez</a>",
+                "footer-subtitle": "Creador de Videojuegos y Desarrollador"
+            },
+            en: {
+                mainTitle: "Xlerion - Video 2 Anim",
+                mainSubtitle: "Transform real movement into professional 3D animations from your desktop. A complete solution for game developers, animators, and content creators.",
+                nav_features: "Features",
+                nav_install: "Installation",
+                nav_usage: "Usage",
+                nav_license: "License",
+                featuresTitle: "Key Features",
+                feature1Title: "Intuitive GUI",
+                feature1Desc: "Manage the entire process with a clean and easy-to-use UI, without touching the command line.",
+                feature2Title: "Multiple Capture Modes",
+                feature2Desc: "Capture body pose, high-precision hands, or detailed facial gestures.",
+                feature3Title: "Session Management",
+                feature3Desc: "Save, load, and manage all your captures in a dedicated panel for an organized workflow.",
+                feature4Title: "Export to BVH",
+                feature4Desc: "Convert pose data to `.bvh` format, the standard compatible with most 3D software.",
+                setupTitle: "3-Step Installation",
+                setupSubtitle: "An initial setup ensures compatibility and the success of the process.",
+                installStep1Title: "Install Miniconda",
+                installStep1Desc: "Use Conda to create an isolated Python environment and avoid version conflicts.",
+                installStep2Title: "Create Environment",
+                installStep2Desc: "Create an environment (`mocap_env`) with Python 3.10, the ideal version for the project's libraries.",
+                installStep3Title: "Install Dependencies",
+                installStep3Desc: "Install all necessary libraries within the activated environment with a single command.",
+                pipelineTitle: "Workflow",
+                pipelineSubtitle: "Start the application by double-clicking `start.cmd` and follow these steps.",
+                stage1Title: "Stage 1: Data Capture",
+                stage1Desc: "Choose a capture mode (Pose, Hands, Face), select a video or use the webcam, and press \"Start Capture\". The session will be saved automatically upon completion.",
+                stage2Title: "Stage 2: Export Animation",
+                stage2Desc: "Select a \"Body Pose\" session from the list on the left. Click \"Export Animation\" to convert the data to a `.bvh` file.",
+                techTitle: "Technological Components",
+                techSubtitle: "The key libraries that make this pipeline possible.",
+                techDesc: "MediaPipe is the heart of the capture, while NumPy and SciPy are crucial for mathematical calculations. Tkinter builds the GUI, and OpenCV manages the video.",
+                chartLabels: ['MediaPipe (Pose/Hand/Face)', 'OpenCV (Video)', 'NumPy/SciPy (Math)', 'Tkinter (GUI)'],
+                usageTitle: "Usage in 3D Software",
+                usageSubtitle: "The final `.bvh` file is compatible with major industry tools.",
+                usageBlender: "Import via `File > Import > Motion Capture (.bvh)`.",
+                usageUnity: "Drag into the project, set the Rig to \"Humanoid\", and apply to the character's Animator.",
+                usage3ds: "Import directly from the `File > Import` menu.",
+                licenseTitle: "License and Copyright",
+                licenseSubTitle: "Project License",
+                licenseType: "This project is distributed under the MIT License.",
+                copyrightNotice: "Copyright (c) 2025 Miguel Rodriguez Martinez",
+                licenseDisclaimer: "THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY.",
+                acknowledgmentsTitle: "Acknowledgments and Collaboration",
+                acknowledgment1: "This software uses third-party libraries, including MediaPipe by Google and OpenCV.",
+                acknowledgment2: "The source code development of this application was carried out in collaboration with Google's AI.",
+                "footer-main": "A project by <a href=\"https://www.linkedin.com/in/mikerodriguez84\" target=\"_blank\" class=\"font-bold text-slate-300 hover:text-teal-400 transition-colors\">Miguel Rodriguez Martinez</a>",
+                "footer-subtitle": "Game Creator and Developer"
+            },
+            ja: {
+                mainTitle: "Xlerion - ビデオからアニメへ",
+                mainSubtitle: "デスクトップから実際の動きをプロの3Dアニメーションに変換します。ゲーム開発者、アニメーター、コンテンツ制作者向けの完全なソリューションです。",
+                nav_features: "特徴",
+                nav_install: "インストール",
+                nav_usage: "使用法",
+                nav_license: "ライセンス",
+                featuresTitle: "主な機能",
+                feature1Title: "直感的なGUI",
+                feature1Desc: "コマンドラインを使わずに、クリーンで使いやすいUIで全プロセスを管理します。",
+                feature2Title: "複数のキャプチャモード",
+                feature2Desc: "全身ポーズ、高精度の手、または詳細な顔のジェスチャーをキャプチャします。",
+                feature3Title: "セッション管理",
+                feature3Desc: "専用パネルですべてのキャプチャを保存、読み込み、管理し、整理されたワークフローを実現します。",
+                feature4Title: "BVHへのエクスポート",
+                feature4Desc: "ポーズデータをほとんどの3Dソフトウェアと互換性のある標準の`.bvh`形式に変換します。",
+                setupTitle: "3ステップインストール",
+                setupSubtitle: "初期設定により、互換性とプロセスの成功が保証されます。",
+                installStep1Title: "Minicondaのインストール",
+                installStep1Desc: "Condaを使用して、隔離されたPython環境を作成し、バージョンの競合を回避します。",
+                installStep2Title: "環境の作成",
+                installStep2Desc: "プロジェクトのライブラリに最適なバージョンであるPython 3.10で環境（`mocap_env`）が作成されます。",
+                installStep3Title: "依存関係のインストール",
+                installStep3Desc: "必要なすべてのライブラリが、有効化された環境内に単一のコマンドでインストールされます。",
+                pipelineTitle: "ワークフロー",
+                pipelineSubtitle: "`start.cmd`をダブルクリックしてアプリケーションを起動し、以下の手順に従ってください。",
+                stage1Title: "ステージ1：データキャプチャ",
+                stage1Desc: "キャプチャモード（ポーズ、手、顔）を選択し、ビデオを選択するかウェブカメラを使用し、「キャプチャ開始」を押します。完了するとセッションは自動的に保存されます。",
+                stage2Title: "ステージ2：アニメーションのエクスポート",
+                stage2Desc: "左のリストから「全身ポーズ」のセッションを選択します。「アニメーションをエクスポート」をクリックして、データを`.bvh`ファイルに変換します。",
+                techTitle: "技術コンポーネント",
+                techSubtitle: "このパイプラインを可能にする主要なライブラリ。",
+                techDesc: "MediaPipeはキャプチャの中心であり、NumPyとSciPyは数学計算に不可欠です。TkinterはGUIを構築し、OpenCVはビデオを管理します。",
+                chartLabels: ['MediaPipe (ポーズ/手/顔)', 'OpenCV (ビデオ)', 'NumPy/SciPy (計算)', 'Tkinter (GUI)'],
+                usageTitle: "3Dソフトウェアでの使用",
+                usageSubtitle: "最終的な`.bvh`ファイルは、主要な業界ツールと互換性があります。",
+                usageBlender: "`File > Import > Motion Capture (.bvh)`経由でインポートします。",
+                usageUnity: "プロジェクトにドラッグし、リグを「ヒューマノイド」に設定し、キャラクターのアニメーターに適用します。",
+                usage3ds: "`File > Import`メニューから直接インポートします。",
+                licenseTitle: "ライセンスと著作権",
+                licenseSubTitle: "プロジェクトライセンス",
+                licenseType: "このプロジェクトはMITライセンスの下で配布されています。",
+                copyrightNotice: "Copyright (c) 2025 Miguel Rodriguez Martinez",
+                licenseDisclaimer: "本ソフトウェアは「現状有姿」で提供され、明示または黙示を問わず、いかなる種類の保証もありません。いかなる場合も、作者または著作権者は、いかなる請求、損害、その他の責任も負わないものとします。",
+                acknowledgmentsTitle: "謝辞と協力",
+                acknowledgment1: "このソフトウェアは、GoogleのMediaPipeやOpenCVを含むサードパーティのライブラリを使用しています。",
+                acknowledgment2: "このアプリケーションのソースコード開発は、GoogleのAIとの協力のもとで行われました。",
+                "footer-main": "<a href=\"https://www.linkedin.com/in/mikerodriguez84\" target=\"_blank\" class=\"font-bold text-slate-300 hover:text-teal-400 transition-colors\">Miguel Rodriguez Martinez</a>によるプロジェクト",
+                "footer-subtitle": "ゲームクリエーター兼開発者"
+            }
+        };
+
+        const techStackCtx = document.getElementById('techStackChart').getContext('2d');
+        const techStackChart = new Chart(techStackCtx, {
+            type: 'doughnut',
+            data: {
+                labels: translations.es.chartLabels,
+                datasets: [{
+                    label: 'Componentes del Proyecto',
+                    data: [40, 25, 20, 15],
+                    backgroundColor: [
+                        '#2dd4bf', // teal-400
+                        '#818cf8', // indigo-400
+                        '#facc15', // yellow-400
+                        '#fb923c'  // orange-400
+                    ],
+                    borderColor: '#1f2937', // gray-800
+                    borderWidth: 4,
+                    hoverOffset: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            padding: 20,
+                            color: '#9ca3af', // gray-400
+                            font: {
+                                size: 14,
+                                family: "'Inter', sans-serif"
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                  return label.join(' ');
+                                } else {
+                                  return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        function changeLanguage(lang) {
+            document.documentElement.lang = lang;
+            
+            document.querySelectorAll('[data-lang-key]').forEach(element => {
+                const key = element.getAttribute('data-lang-key');
+                if (translations[lang] && translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+
+            techStackChart.data.labels = translations[lang].chartLabels;
+            techStackChart.update();
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById(`lang-${lang}`).classList.add('active');
+        }
+
+        document.getElementById('lang-es').addEventListener('click', () => changeLanguage('es'));
+        document.getElementById('lang-en').addEventListener('click', () => changeLanguage('en'));
+        document.getElementById('lang-ja').addEventListener('click', () => changeLanguage('ja'));
+
+        document.addEventListener('DOMContentLoaded', () => {
+            changeLanguage('es');
+        });
+
+    </script>
+
+</body>
+</html>
