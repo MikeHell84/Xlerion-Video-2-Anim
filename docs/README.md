@@ -2,6 +2,9 @@ Xlerion - Video 2 Anim
 Español (Spanish)
 Este proyecto es una aplicación de escritorio completa en Python que utiliza una interfaz gráfica para gestionar un pipeline de captura de movimiento, desde un video hasta un archivo de animación 3D (.bvh).
 
+Webpage:
+http://mikehell84.github.io/Xlerion-Video-2-Anim/
+
 ✨ Características Principales
 Interfaz Gráfica Intuitiva: Gestiona todo el proceso con botones y menús, sin necesidad de usar la línea de comandos.
 
