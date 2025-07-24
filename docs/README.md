@@ -5,7 +5,7 @@ Este proyecto es una aplicación de escritorio completa en Python que utiliza un
 Webpage:
 http://mikehell84.github.io/Xlerion-Video-2-Anim/
 
-✨ Características Principales
+<h1>Características Principales </h1>
 Interfaz Gráfica Intuitiva: Gestiona todo el proceso con botones y menús, sin necesidad de usar la línea de comandos.
 
 Múltiples Modos de Captura:
