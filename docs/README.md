@@ -1,11 +1,11 @@
-<h1>Xlerion</h1> - <h2>Video 2 Anim</h2>
+Xlerion - Video 2 Anim
 Español (Spanish)
 Este proyecto es una aplicación de escritorio completa en Python que utiliza una interfaz gráfica para gestionar un pipeline de captura de movimiento, desde un video hasta un archivo de animación 3D (.bvh).
 
 Webpage:
-http://mikehell84.github.io/Xlerion-Video-2-Anim/
+https://mikehell84.github.io/Xlerion-Video-2-Anim/
 
-<h1>Características Principales </h1>
+✨ Características Principales
 Interfaz Gráfica Intuitiva: Gestiona todo el proceso con botones y menús, sin necesidad de usar la línea de comandos.
 
 Múltiples Modos de Captura:
@@ -29,12 +29,12 @@ Soporte Multilenguaje y Temas: Interfaz traducida a Español, Inglés y Japonés
 1. Guía de Instalación (Entorno Controlado con Conda)
 Para evitar problemas de compatibilidad, es altamente recomendable usar el gestor de entornos Conda.
 
-Paso 1.1: Instalar Miniconda
+1.1. Instalar Miniconda
 Si no lo tienes, descarga e instala Miniconda.
 
 Enlace de descarga: Miniconda para Windows
 
-Paso 1.2: Crear y Activar el Entorno
+1.2. Crear y Activar el Entorno
 Abre la Anaconda Prompt (miniconda3) desde tu menú de inicio.
 
 Crea un nuevo entorno llamado mocap_env con Python 3.10:
@@ -45,7 +45,7 @@ Activa el entorno. Deberás hacer esto cada vez que abras una nueva terminal par
 
 conda activate mocap_env
 
-Paso 1.3: Instalar Dependencias
+1.3. Instalar Dependencias
 Con el entorno (mocap_env) activado, instala todas las librerías necesarias con un solo comando:
 
 pip install opencv-python pyyaml mediapipe numpy scipy Pillow
@@ -100,6 +100,7 @@ Este software utiliza librerías de terceros, incluyendo MediaPipe de Google (Li
 El desarrollo del código fuente de esta aplicación fue realizado en colaboración con la IA de Google.
 
 English (Inglés)
+Xlerion - Video 2 Anim
 This project is a complete desktop application in Python that uses a graphical interface to manage a motion capture pipeline, from a video to a 3D animation file (.bvh).
 
 ✨ Key Features
@@ -126,12 +127,12 @@ Multi-language and Theme Support: Interface translated into Spanish, English, an
 1. Installation Guide (Controlled Environment with Conda)
 To avoid compatibility issues, it is highly recommended to use the Conda environment manager.
 
-Step 1.1: Install Miniconda
+1.1. Install Miniconda
 If you don't have it, download and install Miniconda.
 
 Download link: Miniconda for Windows
 
-Step 1.2: Create and Activate the Environment
+1.2. Create and Activate the Environment
 Open the Anaconda Prompt (miniconda3) from your Start Menu.
 
 Create a new environment named mocap_env with Python 3.10:
@@ -142,7 +143,7 @@ Activate the environment. You will need to do this every time you open a new ter
 
 conda activate mocap_env
 
-Step 1.3: Install Dependencies
+1.3. Install Dependencies
 With the (mocap_env) environment activated, install all necessary libraries with a single command:
 
 pip install opencv-python pyyaml mediapipe numpy scipy Pillow
@@ -197,6 +198,7 @@ This software uses third-party libraries, including MediaPipe by Google (Apache 
 The source code development of this application was carried out in collaboration with Google's AI.
 
 日本語 (Japanese)
+Xlerion - ビデオからアニメへ
 このプロジェクトは、ビデオから3Dアニメーションファイル（.bvh）まで、モーションキャプチャパイプラインを管理するためのグラフィカルインターフェースを使用した、Pythonの完全なデスクトップアプリケーションです。
 
 ✨ 主な機能
@@ -223,12 +225,12 @@ BVHへのエクスポート: ほとんどの3Dソフトウェアと互換性の�
 1. インストールガイド（Condaによる管理環境）
 互換性の問題を避けるため、Conda環境マネージャーの使用を強く推奨します。
 
-ステップ1.1: Minicondaのインストール
+1.1. Minicondaのインストール
 まだインストールしていない場合は、Minicondaをダウンロードしてインストールしてください。
 
 ダウンロードリンク: Miniconda for Windows
 
-ステップ1.2: 環境の作成と有効化
+1.2. 環境の作成と有効化
 スタートメニューから**Anaconda Prompt (miniconda3)**を開きます。
 
 Python 3.10でmocap_envという名前の新しい環境を作成します:
@@ -239,7 +241,7 @@ conda create --name mocap_env python=3.10
 
 conda activate mocap_env
 
-ステップ1.3: 依存関係のインストール
+1.3. 依存関係のインストール
 (mocap_env)環境を有効にした状態で、1つのコマンドで必要なすべてのライブラリをインストールします:
 
 pip install opencv-python pyyaml mediapipe numpy scipy Pillow
